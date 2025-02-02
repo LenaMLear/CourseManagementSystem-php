@@ -1,0 +1,165 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('../images/campus.jpg');
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-size: cover; /* Optional: Cover the entire background */
+  background-repeat: no-repeat; /* Prevent image from repeating */
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  width: 90%;
+  max-width: 1200px;
+  margin-top: 20px;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr; /* Change to single column layout */
+  }
+}
+
+.menu-container {
+  position: absolute;
+  top: 10px; /* Adjust the top position */
+  right: 10px; /* Adjust the right position */
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  padding: 10px;
+  border-radius: 3px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.menu-image {
+  width: 100px; /* Adjust the width as needed */
+  height: auto;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%; /* Positioning below the image */
+  left: 0;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-menu a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f1f1f1;
+}
+
+.menu-container:hover .dropdown-menu {
+  display: block;
+}
+
+.welcome {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.warning {
+  color: red;
+  text-align: center;
+}
+
+table {
+  background-color: #fff; /* White background for the table */
+  border-collapse: separate; /* Separate borders to allow rounded corners */
+  border-spacing: 0; /* Remove spacing between cells */
+  border-radius: 20px; /* Add border-radius */
+  width: 100%; /* Adjust the width of the table */
+  max-width: 800px; /* Limit the maximum width */
+  margin: 20px auto; /* Center the table */
+  overflow: hidden; /* Ensure rounded corners are visible */
+}
+
+table th:first-child {
+  border-top-left-radius: 10px; /* Top-left corner */
+}
+
+table th:last-child {
+  border-top-right-radius: 10px; /* Top-right corner */
+}
+
+table td:first-child {
+  border-bottom-left-radius: 10px; /* Bottom-left corner */
+}
+
+table td:last-child {
+  border-bottom-right-radius: 10px; /* Bottom-right corner */
+}
+
+h1 {
+  color: white;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: center;
+  border: none; /* Remove the borders */
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+p {
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold; /* Make the text bold */
+}
+
+p.warning {
+  color: #ff0000; /* Red color for warning */
+  font-size: 20px;
+  margin-top: 10px; /* Add some space above the warning */
+  background-color: rgba(255, 255, 255, 0.9); /* White with 0.9 opacity */
+  padding: 10px; /* Add padding to the warning message */
+  border-radius: 5px; /* Add border-radius for rounded corners */
+}
+
+caption {
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.buttons {
+  text-align: center;
+  margin-top: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+  background-color: #4CAF50;
+  color: white; /* White font color */
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #45a049;
+}

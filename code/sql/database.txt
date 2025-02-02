@@ -1,0 +1,125 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.0
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1:3306
+-- Generation Time: Feb 07, 2023 at 05:29 PM
+-- Server version: 8.0.31
+-- PHP Version: 8.0.26
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `lebaneseuniversity`
+--
+CREATE DATABASE IF NOT EXISTS `lebaneseuniversity` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;
+USE `lebaneseuniversity`;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `instructor`
+--
+
+DROP TABLE IF EXISTS `instructor`;
+CREATE TABLE IF NOT EXISTS `instructor` (
+  `id` int NOT NULL,
+  `name` varchar(30) NOT NULL,
+  `password` varchar(100) NOT NULL,
+  `major` varchar(30) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `instructor`
+--
+
+INSERT INTO `instructor` (`id`, `name`, `password`, `major`) VALUES
+(2, 'Abbas', '123', 'Math');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `login`
+--
+
+DROP TABLE IF EXISTS `login`;
+CREATE TABLE IF NOT EXISTS `login` (
+  `user` int NOT NULL,
+  `pass` varchar(100) NOT NULL,
+  `position` varchar(100) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `login`
+--
+
+INSERT INTO `login` (`user`, `pass`, `position`) VALUES
+(1, 'lina', 'student'),
+(2, 'abbas', 'instructor'),
+(3, '000', 'employee'),
+(33, '44', 'student'),
+(9, '77', 'student');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `register`
+--
+
+DROP TABLE IF EXISTS `register`;
+CREATE TABLE IF NOT EXISTS `register` (
+  `student` text NOT NULL,
+  `course` text NOT NULL,
+  `instructor` text NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `register`
+--
+
+INSERT INTO `register` (`student`, `course`, `instructor`) VALUES
+('Lina Alameh', 'C++', 'Youssef Atat'),
+('Joelle Jouni', 'C++', 'Youssef Atat'),
+('Lynn Zeayter', 'C++', 'Youssef Atat'),
+('Lina Alameh', 'Python', 'Abbas Rammal'),
+('Lina Alameh', 'Python', 'Abbas Rammal'),
+('Lina Alameh', 'Python', 'Abbas Rammal'),
+('Saja Tawil', 'R', 'Hussen Hazime');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `students`
+--
+
+DROP TABLE IF EXISTS `students`;
+CREATE TABLE IF NOT EXISTS `students` (
+  `firstName` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `lastName` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `major` varchar(30) NOT NULL,
+  `Password` varchar(100) NOT NULL,
+  `id` int NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `students`
+--
+
+INSERT INTO `students` (`firstName`, `lastName`, `major`, `Password`, `id`) VALUES
+('kamel', 'ezzedine', 'sales', '88', 45),
+('lina', 'alameh', 'data', '1234', 87),
+('kamel', 'sobhe', 'marketing', '44', 33),
+('9', 'mohsen', 'barakat', 'public relations', 77);
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

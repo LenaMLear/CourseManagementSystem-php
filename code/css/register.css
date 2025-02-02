@@ -1,0 +1,114 @@
+body {
+    background-image: url('../images/student.jpg');
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+a img {
+    width: 120px;
+    height: 120px;
+}
+
+.menu-container {
+position: absolute;
+top: 10px; /* Adjust the top position */
+right: 10px; /* Adjust the right position */
+background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+padding: 10px;
+border-radius: 3px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.menu-image {
+width: 100px; /* Adjust the width as needed */
+height: auto;
+cursor: pointer;
+}
+
+.dropdown-menu {
+display: none;
+position: absolute;
+top: 100%; /* Positioning below the image */
+left: 0;
+background-color: #f9f9f9;
+box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+z-index: 1;
+}
+
+.dropdown-menu a {
+color: black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+}
+
+.dropdown-menu a:hover {
+background-color: #f1f1f1;
+}
+
+.menu-container:hover .dropdown-menu {
+display: block;
+}
+
+.form-container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 400px;
+    width: 80%;
+}
+
+.form-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.form-table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.form-table td:last-child {
+    border-bottom: none;
+}
+
+select, input[type="text"],
+select, input[type="number"] {
+    width: calc(100% - 22px);
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+    width: calc(100% - 22px);
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.message {
+    text-align: center;
+    margin-top: 20px;
+    color: #ff6347;
+    font-weight: bold;
+}
